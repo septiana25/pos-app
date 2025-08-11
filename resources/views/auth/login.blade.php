@@ -71,6 +71,15 @@
         </div>
         <div class="card-body login-card-body">
           <p class="login-box-msg">Sign in to start your session</p>
+          @if ($errors->any())
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
           <form action="{{ route('login') }}" method="post">
             @csrf
             <div class="input-group mb-1">
@@ -80,9 +89,6 @@
               </div>
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
             </div>
-            @error('email')
-                <small class="text-danger">{{ $message }}</small>
-            @enderror
             <div class="input-group mb-1">
               <div class="form-floating">
                 <input id="loginPassword" type="password" name="password" class="form-control" placeholder="" />
