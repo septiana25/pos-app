@@ -7,12 +7,11 @@ use Illuminate\Support\Facades\Session;
 
 class LoginService {
   public function login(array $request){
-    if (Auth::attempt($request)) {
-      Session::regenerate();
-      return Auth::user();
+    if (!Auth::attempt($request)) {
+      throw new Exception('Email atau password salah.');
     }
-
-    throw new Exception('Email atau password salah.');
+    
+    Session::regenerate();
 
   }
 
