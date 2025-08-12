@@ -6,8 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('auth.login');
-});
+})->middleware('guest');
 
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'handleLogin'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 

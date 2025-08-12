@@ -35,8 +35,11 @@
     <!--end::Menu Body-->
     <!--begin::Menu Footer-->
     <li class="user-footer">
-        <a href="#" class="btn btn-default btn-flat">Profile</a>
-        <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+        <a href="" class="btn btn-default btn-flat float-end"
+         onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"
+        >Sign out</a>
+        <form id="logout-form" class="d-none" action="{{ route('logout') }}" method="post">@csrf</form>
     </li>
     <!--end::Menu Footer-->
     </ul>

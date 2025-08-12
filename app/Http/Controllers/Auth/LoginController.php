@@ -37,5 +37,6 @@ class LoginController extends Controller
 
     public function logout(Request $request){
         $this->loginService->logout();
+        return redirect()->route('login');
     }
 }
