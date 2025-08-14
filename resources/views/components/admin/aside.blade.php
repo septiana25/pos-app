@@ -31,9 +31,32 @@
             >
                 <li class="nav-item">
                     <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                        <i class="nav-icon bi bi-speedometer"></i>
+                        <i class="nav-icon bi bi-pc-display-horizontal"></i>
                         <p>Dashboard</p>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-database"></i>
+                      <p>
+                        Master Data
+                        <i class="nav-arrow bi bi-chevron-right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="./widgets/small-box.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Kategori</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./widgets/info-box.html" class="nav-link">
+                          <i class="nav-icon bi bi-circle"></i>
+                          <p>Produk</p>
+                        </a>
+                      </li>
+                    </ul>
                 </li>
             </ul>
         <!--end::Sidebar Menu-->
