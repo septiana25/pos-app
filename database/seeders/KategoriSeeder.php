@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Kategori;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use Illuminate\Support\Str;
